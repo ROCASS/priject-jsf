@@ -9,8 +9,21 @@
 	<h:body>
 	
 	<h:outputLabel value="Bienvendio al sistema."></h:outputLabel>
-	<h:outputLabel value="Bienvendio al sistema."></h:outputLabel>
-	<h:outputLabel value="Bienvendio al sistema."></h:outputLabel>
+	
+	<h:dataTable id="tblDemo" var="demo" value="#{principalController.demo}">
+		<h:column>
+			<f:facet name="header">Nombre:</f:facet>
+			<h:outputText value="#{demo.nombre}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Email:</f:facet>
+			<h:outputText value="#{demo.email}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header">RFC:</f:facet>
+			<h:outputText value="#{demo.rfc}"></h:outputText>
+		</h:column>
+	</h:dataTable>
 	
 	
 	
